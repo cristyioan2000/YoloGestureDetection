@@ -1,3 +1,5 @@
+# The whole content of this repo (files && info) isn't revealed due an upcoming competition
+# Come back after 25.05.2019 !
 # YoloGestureDetection
 
 ## This project contains a trained hand model for specific hand gestures and facial recognition.
@@ -16,4 +18,4 @@ The script used for sampels gathering is here https://github.com/cristyioan2000/
 
 ## Training
 The model was trained in multiple sessiosn  on google colab. Time trained: several days, nearly a weeek.
-Come back on 25.05.2019 !
+
