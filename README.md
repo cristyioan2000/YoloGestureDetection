@@ -1,5 +1,5 @@
-# The whole content of this repo (files && info) isn't revealed due an upcoming competition
-# Come back after 25.05.2019 !
+# The whole content of this repo (files && info) isn't revealed yet.
+# Come back after 5.07.2019 !
 # YoloGestureDetection
 
 ## This project contains a trained hand model for specific hand gestures and facial recognition.
