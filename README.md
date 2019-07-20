@@ -16,3 +16,5 @@ The script used for sampels gathering is here https://github.com/cristyioan2000/
 ## Training
 The model was trained in multiple sessiosn  on google colab. Time trained: several days, nearly a weeek.
 
+# Weight link to google drive #
+https://drive.google.com/open?id=1t2ROQkOYinSsk9_i5663l2sHCs5_xtQ1
