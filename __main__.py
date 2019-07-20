@@ -1,19 +1,12 @@
 import cv2 as cv
 import numpy as np
 from pynput.mouse import Button,Controller
-
-from PySide2.QtWidgets import QApplication
-from PySide2.QtQuick import QQuickView
-from PySide2.QtCore import QUrl
-
-
 # app = QApplication([])
 # view = QQuickView()
 # url = QUrl(r"D:\Projects\GUI\view.qml")
 # view.setSource(url)
 # view.showFullScreen()
 # app.exec_()
-
 
 mouse=Controller()
 
@@ -25,66 +18,21 @@ inpHeight = 288
 
 # Load names of classes and turn that into a list
 #classesFile = "coco"
-classesFile = r"D:\Projects\Licenta\cfg_and_weights\4_classes_416\obj.names"
+# Path for obj.names
+your_path = r''
+classesFile = your_path
 classes = None
 
 with open(classesFile, 'rt') as f:
     classes = f.read().rstrip('\n').split('\n')
 
 # Model configuration
-#modelConf = 'yolov3.cfg'
-#modelWeights = 'yolov3.weights'
-
-# modelConf = r'D:\Projects\Licenta\Yolo\tiny cfgs\yolov3-tiny.cfg'
-# modelWeights = r'D:\Projects\Licenta\Yolo\tiny cfgs\yolov3-tiny.weights'
-#modelWeights = 'D:\\Projects\\Licenta\\Yolo\\FirstTry\\yolov3-tiny.weights'
+# Config file path
+modelConf = r''
+# Weight path
+modelWeights = r''
 
 
-# modelConf = r'D:\Projects\Licenta\cfg_and_weights\2_classes_416\yolov3-tiny.cfg'
-# modelWeights = r'D:\Projects\Licenta\cfg_and_weights\2_classes_416\yolov3-tiny_30000.weights'
-
-'''
-3 classes 17k images for training
-'''
-
-# modelConf = r'D:\Projects\Licenta\cfg_and_weights\3_classes_416\yolov3-tiny.cfg'
-# # modelWeights = r'D:\Projects\Licenta\cfg_and_weights\3_classes_416\yolov3-tiny_1000.weights'
-# modelWeights = r'D:\Projects\Licenta\cfg_and_weights\3_classes_416\yolov3-tiny_4000.weights'
-
-
-
-'''
-4 classes 5.1k img correct labels, few errors on anchor calc
-5000 is the best working
-'''
-modelConf = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\yolov3-tiny.cfg'
-modelWeights = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\yolov3-tiny_15000.weights'#D:\Projects\Licenta\cfg_and_weights\4_classes_416\VIII9_DATASET_cfg\
-
-
-'''q
-4 classes 1600 img correct labls
-VIII9 dataset
-7000 looks to work best
-'''
-modelConf = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\test cfg\yolov3-tiny.cfg'
-modelWeights = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\VIII9_DATASET_cfg\yolov3-tiny_11000.weights'#D:\Projects\Licenta\cfg_and_weights\4_classes_416\VIII9_DATASET_cfg\
-
-'''
-Siemens Birou DATASET
-1600 imgs
-'''
-modelConf = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\test cfg\yolov3-tiny.cfg'
-modelWeights = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\Siemens_Birou_cfg\yolov3-tiny_9000.weights'#D:\Projects\Licenta\cfg_and_weights\4_classes_416\VIII9_DATASET_cfg\
-
-'''
-Combined Siemens Birou + VIII9 DATASET
-3200 imgs
-'''
-modelWeights = r'D:\Projects\Licenta\cfg_and_weights\4_classes_416\Siemens_VIII9_cfg\yolov3-tiny_30000.weights'
-
-
-
-#C:\Users\Cristi\darknet\data
 def postprocess(frame, outs):
     frameHeight = frame.shape[0]
     frameWidth = frame.shape[1]
