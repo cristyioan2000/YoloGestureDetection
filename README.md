@@ -18,3 +18,8 @@ The model was trained in multiple sessiosn  on google colab. Time trained: sever
 
 # Weight link to google drive #
 https://drive.google.com/open?id=1t2ROQkOYinSsk9_i5663l2sHCs5_xtQ1
+
+
+## Results ##
+![alt text](https://github.com/cristyioan2000/YoloGestureDetection/blob/master/open.png)
+
