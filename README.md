@@ -21,5 +21,5 @@ https://drive.google.com/open?id=1t2ROQkOYinSsk9_i5663l2sHCs5_xtQ1
 
 
 ## Results ##
-![alt text](https://github.com/cristyioan2000/YoloGestureDetection/blob/master/open.png)
+![alt text](https://github.com/cristyioan2000/YoloGestureDetection/blob/master/Res.png)
 
